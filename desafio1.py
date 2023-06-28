@@ -1,6 +1,5 @@
 import random
 
-# Lista de palavras secretas pré-definidas
 palavras = ['python', 'programacao', 'computador', 'jogo', 'desenvolvimento']
 
 def escolher_palavra():

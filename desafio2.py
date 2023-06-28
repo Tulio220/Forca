@@ -9,15 +9,19 @@ S:*****************
 S:***************
 Suponha que as temperaturas sejam todas positivas e que nenhuma seja maior que 80°C.
 """
-temperaturas = [19, 21, 25, 22, 20, 17, 15]
+import random
 
-# Percorre cada temperatura na lista e exibe o histograma
-for temperatura in temperaturas:
-    # Cria uma string com '*' repetidos para representar a temperatura no histograma
-    histograma = '*' * temperatura
+dias_semana = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S']
+temp = []
 
-    # Obtém o dia da semana correspondente ao índice da temperatura na lista
-    dia_semana = ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'][temperaturas.index(temperatura)]
+for dia in dias_semana:
+    for _ in range(0, 1):
+        temperatura = random.randint(0, 80)
+        asteriscos = '*' * temperatura
+        print(f'{dia}: {asteriscos}')
+        temp.append(temperatura)
+    print()
 
-    # Exibe o dia da semana e o histograma
-    print(f"{dia_semana}: {histograma}")
+temperaturas_string = ', '.join(map(str, temp))
+print(f'As temperaturas foram {temperaturas_string}°C, respectivamente.')
+
